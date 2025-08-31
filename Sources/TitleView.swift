@@ -29,7 +29,7 @@ open class TitleView: UIView {
     contentController.action = { [weak self, weak dropdown] index in
       self?.button.label.text = items[index]
       self?.action?(index)
-      self?.layoutSubviews()
+      self?.setNeedsLayout()
       dropdown?.hide()
     }
 
